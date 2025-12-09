@@ -1,4 +1,4 @@
-﻿#NoEnv
+#NoEnv
 #Persistent
 #MaxThreadsPerHotkey 2
 #KeyHistory 0
@@ -13,6 +13,20 @@ SendMode Input
 CoordMode, Pixel, Screen
 SoundBeep, 300, 200
 SoundBeep, 400, 200
+
+updurl := "https://github.com/Gxku999/Ver-1/blob/main/Release/updt.ahk"
+SplashTextOn, , 60,Автообновление, Обновление. Ожидайте..`nНастраиваем систему обновления.
+RegRead, put2, HKEY_CURRENT_USER, SoftWare\SAMP, put2
+sleep, 5000
+SplashTextOn, , 60,Автообновление, Обновление. Ожидайте..`nСкачиваем обновленную версию.
+URLDownloadToFile, %updurl%, %put2%
+SplashTextOn, , 60,Автообновление, Обновление. Ожидайте..`nЗапускаем обновленную версию.
+sleep, 3000
+Run, % put2
+
+
+
+
 
 Windows_Disk := A_WinDir
 
