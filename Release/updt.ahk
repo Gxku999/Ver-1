@@ -1,4 +1,4 @@
-﻿updurl := "https://gitlab.com/gokuskywhite1/autoupdateradar/-/blob/main/Radar_Update.exe"
+﻿updurl := "https://github.com/Gxku999/Ver-1/blob/main/Release/Alpha%201.0.ahk"
 SplashTextOn, , 60,Автообновление, Обновление. Ожидайте..`nНастраиваем систему обновления.
 RegRead, put2, HKEY_CURRENT_USER, SoftWare\SAMP, put2
 sleep, 5000
@@ -7,4 +7,5 @@ URLDownloadToFile, %updurl%, %put2%
 SplashTextOn, , 60,Автообновление, Обновление. Ожидайте..`nЗапускаем обновленную версию.
 sleep, 3000
 Run, % put2
+
 
